@@ -15,10 +15,10 @@ const Navbar = () => {
   const subscriptions = ["Traversy Media", "Academind", "The Net Ninja", "Dev Ed", "Web Dev Simplified"];
 
   return (
-    <nav className="bg-neutral-950 p-3">
+    <nav className="bg-neutral-950 p-3 hidden sm:flex">
       <div className="flex justify-between items-center w-full h-10">
         {/* Menu Toggle & Logo */}
-        <div className="flex w-1/2 sm:w-1/3 justify-start">
+        <div className="flex w-1/3 justify-start">
           <button onClick={toggleMenu} className=" text-neutral-100 mr-4">
             <FontAwesomeIcon icon={faBars} size="lg" />
           </button>
@@ -28,13 +28,13 @@ const Navbar = () => {
           </div>
         </div>
         {/* Search Bar */}
-        <div className="hidden sm:flex sm:w-1/3 justify-center items-center rounded-full bg-neutral-800 py-3 px-5">
+        <div className="flex w-1/3 justify-center items-center rounded-full bg-neutral-800 py-3 px-5">
           <input type="text" placeholder="Search" className=" focus:outline-none w-full text-neutral-100 text-xl placeholder-neutral-400 bg-neutral-800" />
           <button className="ml-4 text-neutral-100">
             <FontAwesomeIcon icon={faMagnifyingGlass} size="lg" />
           </button>
         </div>
-        <div className="flex w-1/2 sm:w-1/3 justify-end">
+        <div className="flex w-1/3 justify-end">
           <Link href="#">
             <FontAwesomeIcon icon={faVideo} className="px-3" size="lg" />
           </Link>
