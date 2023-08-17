@@ -15,11 +15,11 @@ const Navbar = () => {
   const subscriptions = ["Traversy Media", "Academind", "The Net Ninja", "Dev Ed", "Web Dev Simplified"];
 
   return (
-    <nav className="bg-neutral-950 p-3 hidden sm:flex">
+    <nav className="bg-neutral-950 p-3 hidden sm:flex text-neutral-100">
       <div className="flex justify-between items-center w-full h-10">
         {/* Menu Toggle & Logo */}
         <div className="flex w-1/3 justify-start">
-          <button onClick={toggleMenu} className=" text-neutral-100 mr-4">
+          <button onClick={toggleMenu} className="  mr-4">
             <FontAwesomeIcon icon={faBars} size="lg" />
           </button>
           <div className="text-white text-xl font-semibold">
@@ -29,8 +29,8 @@ const Navbar = () => {
         </div>
         {/* Search Bar */}
         <div className="flex w-1/3 justify-center items-center rounded-full bg-neutral-800 py-3 px-5">
-          <input type="text" placeholder="Search" className=" focus:outline-none w-full text-neutral-100 text-xl placeholder-neutral-400 bg-neutral-800" />
-          <button className="ml-4 text-neutral-100">
+          <input type="text" placeholder="Search" className=" focus:outline-none w-full  text-xl placeholder-neutral-400 bg-neutral-800" />
+          <button className="ml-4 ">
             <FontAwesomeIcon icon={faMagnifyingGlass} size="lg" />
           </button>
         </div>
@@ -47,7 +47,7 @@ const Navbar = () => {
         </div>
       </div>
       {isMenuOpen ? (
-        <aside className="bg-neutral-950 text-neutral-100 p-4 pb-16 mt-16 w-auto h-screen fixed top-0 left-0 overflow-y-scroll">
+        <aside className="bg-neutral-950  p-4 pb-16 mt-16 w-auto h-screen fixed top-0 left-0 overflow-y-scroll">
           <Link href="/" className=" py-2 my-1 hover:bg-neutral-800 transition duration-200 rounded-lg flex">
             <FontAwesomeIcon icon={faHouse} className="w-10 place-self-center" size="lg" />
             Home
@@ -82,7 +82,7 @@ const Navbar = () => {
             Liked Videos
           </Link>
           <hr className="border-neutral-500 my-2" />
-          <h3 className="text-neutral-100 text-lg px-5">Subscriptions</h3>
+          <h3 className=" text-lg px-5">Subscriptions</h3>
           {subscriptions.map((subscription) => (
             <Link href="/" className=" py-2 my-1 hover:bg-neutral-800 transition duration-200 rounded-lg flex " key={subscription}>
               <FontAwesomeIcon icon={faFaceSmile} className="w-10 place-self-center" size="lg" />
@@ -90,7 +90,7 @@ const Navbar = () => {
             </Link>
           ))}
           <hr className="border-neutral-500 my-2" />
-          <h3 className="text-neutral-100 text-lg px-5">Explore</h3>
+          <h3 className=" text-lg px-5">Explore</h3>
           <Link href="/" className=" py-2 my-1 hover:bg-neutral-800 transition duration-200 rounded-lg flex">
             <FontAwesomeIcon icon={faFireFlameCurved} className="w-10 place-self-center" size="lg" />
             Trending
@@ -141,7 +141,7 @@ const Navbar = () => {
             Send Feedback
           </Link>
           <hr className="border-neutral-500 my-2" />
-          <Link href="www.jackscottow.com" className="text-neutral-400 text-sm flex justify-evenly p-1 hover:text-neutral-100">
+          <Link href="www.jackscottow.com" className="text-neutral-400 text-sm flex justify-evenly p-1 hover:">
             Made By Jack Scottow 2023
           </Link>
         </aside>
