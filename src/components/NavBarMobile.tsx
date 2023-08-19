@@ -19,7 +19,7 @@ const NavBarMobile = () => {
     }
   }, [isSearchOpen]);
   return (
-    <nav className="bg-neutral-950 flex sm:hidden h-14 text-neutral-100">
+    <nav className="bg-neutral-950 flex sm:hidden h-14 text-neutral-100 sticky top-0">
       {!isSearchOpen ? (
         <div className="flex justify-between items-center w-full m-1 px-2">
           <div className="flex w-1/3 justify-start">
