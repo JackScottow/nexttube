@@ -5,24 +5,18 @@ import { faBars, faMagnifyingGlass, faVideo, faHouse, faBolt, faPlay, faCirclePl
 import { faBell, faFaceSmile, faClock } from "@fortawesome/free-regular-svg-icons";
 import { faYoutube } from "@fortawesome/free-brands-svg-icons";
 
-const Navbar = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(true);
-
-  const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
-  };
-
+const Navbar = ({ toggleMenu, isMenuOpen }: { toggleMenu: any; isMenuOpen: any }) => {
   const subscriptions = ["Traversy Media", "Academind", "The Net Ninja", "Dev Ed", "Web Dev Simplified"];
 
   return (
-    <nav className="bg-neutral-950 p-3 hidden sm:flex text-neutral-100">
-      <div className="flex justify-between items-center w-full h-10">
+    <nav className="bg-neutral-900 p-3 hidden sm:flex text-neutral-100 fixed top-0 left-0 w-screen">
+      <div className="flex justify-between items-center w-full h-10 z-20">
         {/* Menu Toggle & Logo */}
         <div className="flex w-1/3 justify-start">
           <button onClick={toggleMenu} className="  mr-4">
             <FontAwesomeIcon icon={faBars} size="lg" />
           </button>
-          <div className="text-white text-xl font-semibold">
+          <div className=" text-xl font-semibold">
             <FontAwesomeIcon icon={faYoutube} size="xl" className="px-1 text-red-600 " />
             NextTube
           </div>
@@ -47,7 +41,7 @@ const Navbar = () => {
         </div>
       </div>
       {isMenuOpen ? (
-        <aside className="bg-neutral-950  p-4 pb-16 mt-16 w-auto h-screen fixed top-0 left-0 overflow-y-scroll">
+        <aside className=" text-sm font-normal p-4 pb-16 mt-16 w-56 h-screen fixed top-0 left-0 overflow-y-scroll">
           <Link href="/" className=" py-2 my-1 hover:bg-neutral-800 transition duration-200 rounded-lg flex">
             <FontAwesomeIcon icon={faHouse} className="w-10 place-self-center" size="lg" />
             Home
@@ -141,12 +135,12 @@ const Navbar = () => {
             Send Feedback
           </Link>
           <hr className="border-neutral-500 my-2" />
-          <Link href="www.jackscottow.com" className="text-neutral-400 text-sm flex justify-evenly p-1 hover:">
+          <Link href="https://www.jackscottow.com" className="text-neutral-400 text-sm flex justify-evenly p-1 hover:">
             Made By Jack Scottow 2023
           </Link>
         </aside>
       ) : (
-        <aside className="bg-neutral-950 justify-items-center text-white w-24 text-center py-4 px-1 mt-16 h-screen fixed top-0 left-0 mx-auto overflow-y-auto">
+        <aside className="justify-items-center  w-24 text-center py-4 px-1 mt-16 h-screen fixed top-0 left-0 mx-auto overflow-y-auto">
           <Link href="/" className="py-2 my-1 mb-2 h-20 justify-center hover:bg-neutral-800 transition duration-200 rounded-lg flex flex-col">
             <FontAwesomeIcon icon={faHouse} size="xl" className="pb-1" />
             <p className="text-xs">Home</p>

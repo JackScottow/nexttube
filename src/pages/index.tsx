@@ -1,15 +1,15 @@
-import Image from "next/image";
-import { Inter } from "next/font/google";
-import Navbar from "@/components/NavBar";
-import NavBarMobile from "@/components/NavBarMobile";
+import { Poppins } from "next/font/google";
+import type { ReactElement } from "react";
+import Layout from "../components/Layout";
+import type { NextPageWithLayout } from "./_app";
+import Home from "../components/home";
 
-const inter = Inter({ subsets: ["latin"] });
+const Page: NextPageWithLayout = () => {
+  return <Home></Home>;
+};
 
-export default function Home() {
-  return (
-    <main>
-      <Navbar />
-      <NavBarMobile />
-    </main>
-  );
-}
+Page.getLayout = function getLayout(page: ReactElement) {
+  return <Layout>{page}</Layout>;
+};
+
+export default Page;
