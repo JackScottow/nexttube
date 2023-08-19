@@ -19,7 +19,7 @@ const NavBarMobile = () => {
     }
   }, [isSearchOpen]);
   return (
-    <nav className="bg-neutral-950 flex sm:hidden h-14 text-neutral-100 sticky top-0">
+    <nav className="bg-neutral-900 flex sm:hidden h-14 text-neutral-100 sticky top-0">
       {!isSearchOpen ? (
         <div className="flex justify-between items-center w-full m-1 px-2">
           <div className="flex w-1/3 justify-start">
@@ -48,7 +48,7 @@ const NavBarMobile = () => {
           <input type="text" id="mobile-search" ref={mobileSearchRef} placeholder="Search" className="focus:outline-none w-full place-self-center mx-3 bg-transparent text-xl" />
         </div>
       )}
-      <aside className="bg-neutral-950 text-neutral-100 text-xs w-screen fixed bottom-0 flex justify-evenly items-center text-center">
+      <aside className="bg-neutral-900 text-neutral-100 text-xs w-screen fixed bottom-0 flex justify-evenly items-center text-center">
         <Link href="/" className="flex flex-col p-3 w-1/4">
           <FontAwesomeIcon icon={faHouse} size="xl" className="pb-1" />
           Home
